@@ -219,6 +219,8 @@ html, body {
   gap: 80px;
   justify-items: center;
   align-items: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
 
@@ -260,30 +262,37 @@ html, body {
   gap: 20px;
 }
 
+.why-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 20px;
+
+    
+    grid-template-areas:
+      "box1 box2 box2"
+      "box1 box3 box3"
+      "box4 box4 box5";
+}
 
 .box-one {
-  grid-column: 1 / 2;
-  grid-row: 1 / 3;
+    grid-area: box1;
 }
 
 .box-two {
-  grid-column: 2 / 4;
-  grid-row: 1 / 2;
+    grid-area: box2;
 }
 
 .box-three {
-  grid-column: 1 / 3;
-  grid-row: 3 / 4;
+    grid-area: box3;
 }
 
 .box-four {
-  grid-column: 2 / 4;
-  grid-row: 2 / 3;
+    grid-area: box4;
 }
 
 .box-five {
-  grid-column: 3 / 4;
-  grid-row: 3 / 4;
+    grid-area: box5;
 }
 
 .why-box > div {
@@ -294,6 +303,7 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
 }
 
 .why-box img {
@@ -313,6 +323,228 @@ html, body {
   margin-bottom: 40px ;
 }
 
+/* Featured Episodes Section */
+#featured {
+  background-color: #1A0B2E;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 200px;
+  box-sizing: border-box;
+}
+
+#featured h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.featured-grid {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 30px;
+  flex-wrap: nowrap;
+}
+
+.featured-card {
+  background-color: #250D44;
+  width: 380px;
+  height: 440px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+
+.featured-video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.featured-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 24px;
+}
+
+.featured-content h3 {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.featured-content p {
+  color: #FFFFFF;
+  font-size: 1rem;
+  line-height: 24px;
+  flex-grow: 1;
+}
+
+.featured-duration {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #00FF88;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+/* Host Section */
+
+#host {
+  background-color: #1A0B2E;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 200px;
+}
+
+#host h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.host-card {
+  background-color: #351165;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 40px;
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 50px;
+}
+
+.host-image img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.host-details {
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+
+.host-name {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.host-text {
+  font-size: 1rem;
+  line-height: 24px;
+  margin-bottom: 24px;
+  max-width: 650px;
+}
+
+.host-social {
+  display: flex;
+  gap: 12px;
+}
+
+.host-social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid #4A2A75;
+}
+
+.host-social img {
+  width: 18px;
+  height: 18px;
+}
+
+/* Footer Section */
+
+
+#footer {
+  background: url("../Images/footer-bg.png") ;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  width: 100%;
+  gap: 20px;
+}
+
+.footer-logo img {
+  width: auto;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.footer-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-text {
+  font-size: 1rem;
+  color: #FAFAFA;
+  line-height: 24px;
+}
+
+/* Effects and Animation */
+
+.btn,
+.btn-first,
+.btn-second {
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn-first:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+.btn-second:hover {
+  background-color: #175134;
+  color: #1A0B2E;
+  transform: translateY(-2px);
+}
 
 
 /* for mobile devices */
@@ -336,12 +568,16 @@ html, body {
   }
 
   #hero {
+    background-image: url(../Images/Hero1.png);
     padding: 40px 20px;
     background-size: cover;
     height: 575px;
     justify-content: center;
     width: 100%;
   }
+
+
+
 
   #podcast {
     padding: 40px 20px 60px 20px;
@@ -399,6 +635,105 @@ html, body {
     text-align: left;
     width: 100%;
   }
+
+  #featured {
+    padding: 40px 20px;
+  }
+
+  #featured h1 {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  .featured-grid {
+    flex-direction: column;
+    gap: 16px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .featured-card {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .featured-video iframe {
+    height: 225px;
+  }
+
   
+  #host {
+    padding: 60px 20px;
+  }
+
+  #host h1 {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  .host-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+    border-radius: 20px;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .host-image img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .host-details {
+    text-align: center;
+  }
+
+  .host-name {
+    font-size: 24px;
+  }
+
+  .host-text {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .host-social {
+    justify-content: center;
+  }
+
+  
+  #footer {
+    background-image: url(../Images/Footer\ 3.png);
+    padding: 60px 20px;
+  }
+
+  .footer-logo img {
+    height: 50px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .footer-links a {
+    font-size: 1.2rem;
+    width: auto;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-text {
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
 }
+
 
