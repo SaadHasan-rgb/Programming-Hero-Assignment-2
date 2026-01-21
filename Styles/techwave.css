@@ -24,6 +24,7 @@ html, body {
 
 
 /* navbar */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -218,17 +219,23 @@ html, body {
   grid-template-columns: repeat(4, 1fr);
   gap: 80px;
   justify-items: center;
-  align-items: center;
   width: 100%;
   margin: 0 auto;
 }
 
+.podcast-data > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
 .podcast-data h1 {
   color: #00FF88;
   font-weight: 900;
   font-size: 3rem;
-  margin-bottom: 16px;
+  gap: 16px;
 }
 
 
@@ -240,6 +247,7 @@ html, body {
 }
 
 /* Why Choose TechWave Section*/
+
 #why-choose {
   background-color: #230E3D;
   width: 100%;
@@ -253,13 +261,6 @@ html, body {
   font-size: 3rem;
   color: #FFFFFF;
   padding: 40px 0;
-}
-
-.why-box {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: auto;
-  gap: 20px;
 }
 
 .why-box {
@@ -525,7 +526,7 @@ html, body {
   line-height: 24px;
 }
 
-/* Effects and Animation */
+/* Hoover Effects and Simple Animation */
 
 .btn,
 .btn-first,
@@ -576,7 +577,11 @@ html, body {
     width: 100%;
   }
 
-
+   .hero-circle {
+    transform: scale(0.9);
+    transform-origin: center;
+    margin-bottom: 20px;
+  }
 
 
   #podcast {
@@ -585,17 +590,17 @@ html, body {
   }
 
   .podcast-about h1 {
-    width: 400px;
     font-size: 2rem;
   }
 
   .podcast-about p {
-    width: 400px;
     font-size: 1rem;
   }
-
+  .podcast-about h1,
+  .podcast-about p,
   #podcast hr{
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
   }
   .podcast-data {
     grid-template-columns: repeat(2, 1fr);
